@@ -1,0 +1,69 @@
+---
+title: "conditionals_loops"
+format: html
+---
+
+```{r}
+library(tidyverse)
+
+```
+
+
+```{r}
+pm2_5 <- 48
+
+if(pm2_5 < 100){
+  print("Low to moderate risk")
+}else if(pm2_5 >= 100 & pm2_5 < 150){
+  print("Unhealthy for sensitive groups")
+}else if(pm2_5 >= 150)
+  print("Health risk present")
+
+```
+
+```{r}
+species <- "humpback whale"
+
+if(stringr::str_detect(species, "whale")){
+  print("you found a whale!")
+}
+```
+
+```{r}
+base_burrito <- 6.50
+
+main_ingredient <- "steak"
+
+if(main_ingredient == "veggie"){
+  cost = base_burrito
+} else if(main_ingredient == "chicken"){
+  cost = base_burrito + 3
+} else if(main_ingredient == "steak"){
+  cost = base_burrito + 3.25
+}
+
+print(cost)
+```
+
+```{r}
+fish <- c(8, 10, 12, 23)
+#species <- c("goldfish", "tetras", "guppies", "mollies")
+
+
+prop <- vector(mode = "numeric", length = length(fish))
+
+for(i in seq_along(fish)){
+  prop[i] <- fish[i] / sum(fish)
+}
+
+```
+```{r}
+
+for(i in seq_along(month.name)){
+  print(paste(month.name[i], "is month", i))
+}
+```
+```{r}
+
+```
+
